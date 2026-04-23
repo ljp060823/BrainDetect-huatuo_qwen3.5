@@ -8,7 +8,7 @@ import sys
 sys.path.append("/data/unet-attention-dsconv_github")
 from unet.inference import predict_and_visualize
 
-# vLLM OpenAI-compatible client (你服务器地址)
+# vLLM OpenAI-compatible client 
 llm = ChatOpenAI(
     model="/data/qwen3.5_9b_huatuo",
     base_url="http://localhost:8000/v1",
@@ -65,7 +65,7 @@ def generate_report(mask: np.ndarray, visualized_path: str) -> str:
     # 转 base64
     image_base64 = image_to_base64(visualized_path)
 
-    # 直接调用 chain（这就是你想要的“使用chain”）
+    # chain
     report = chain.invoke({
         "image_base64": image_base64,
         "features": features
