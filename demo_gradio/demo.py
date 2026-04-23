@@ -3,7 +3,7 @@ import requests
 from PIL import Image
 import io
 
-API_URL = "http://127.0.0.1:8001/brain-detect"   # 确认这个能 curl 通
+API_URL = "http://127.0.0.1:8001/brain-detect"   # curl 
 
 def upload_and_detect(file):
     if file is None:
