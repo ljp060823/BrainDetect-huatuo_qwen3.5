@@ -2,7 +2,7 @@
 import torch
 import cv2
 import numpy as np
-from unet.model import AttentionUNet   # 你的 Attention UNet
+from unet.model import AttentionUNet   # Attention UNet
 from unet.utils import CLASS_COLORS   # 颜色映射
 
 def predict_and_visualize(image_path, model_path="/data/unet-attention-dsconv_github/unet/model_save/unet_atten_dsconv_best.pth", output_vis_path="/data/unet-attention-dsconv_github/unet/inference_jpg/inference_output.jpg"):
@@ -38,7 +38,7 @@ def predict_and_visualize(image_path, model_path="/data/unet-attention-dsconv_gi
     overlay = original.copy()
     color_mask = np.zeros_like(original, dtype=np.uint8)
 
-    for cls_id in range(0, 8):  # 只填充病变区域
+    for cls_id in range(0, 8):  # 填充病变区域
         cls_pixels = (mask == cls_id)
         color = CLASS_COLORS[cls_id]
         color_mask[cls_pixels] = color
