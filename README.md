@@ -126,6 +126,16 @@ BrainDetect-huatuo_qwen3.5/
 2. `preprocess/coco_to_mask.py` — COCO JSON → 分割掩码
 3. 数据增强 + 训练/验证集划分
 
+## 演示效果
+
+**Gradio 界面截图 1：**
+
+![Gradio 演示 1](gradio_show.jpg)
+
+**Gradio 界面截图 2：**
+
+![Gradio 演示 2](gradio_show1.jpg)
+
 ## 核心特性
 
 - **改进 UNet**: Attention 模块 + DSConv，兼顾精度与效率
